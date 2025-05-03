@@ -7,9 +7,9 @@ public class CheckDigit
    */  
    public static int getCheck(int num) 
    {  
-       int sum = 0;
-    int numDigits = getNumberOfDigits(num);
-   for (int i = 1; i <= numDigits; i++) { 
+         int sum = 0;
+        int numDigits = getNumberOfDigits(num);
+        for (int i = 1; i <= numDigits; i++) { 
         int digit = getDigit(num, i);
         sum += digit * (7 - i + 1);
     }
@@ -24,9 +24,9 @@ public class CheckDigit
    */     
    public static boolean isValid(int numWithCheckDigit)    
    {      
-        int numDigits = getNumberOfDigits(numWithCheckDigit);
+    int numDigits = getNumberOfDigits(numWithCheckDigit);
     int originalNum = numWithCheckDigit/10; 
-int givenCheckDigit = getDigit(numWithCheckDigit, numDigits); 
+    int givenCheckDigit = getDigit(numWithCheckDigit, numDigits); 
     return getCheck(originalNum) == givenCheckDigit;   
    }      
    }    
